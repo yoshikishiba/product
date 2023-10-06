@@ -1,0 +1,109 @@
+/*全体レイアウト*/
+body{
+    margin: 15px;
+}
+h1{
+    margin: 0;
+}
+h2{
+    font-size: 20px;
+    margin: 0;
+}
+h3{
+    font-size: 16px;
+    margin: 10px 0px;
+}
+p{
+    margin: 0;
+}
+li{
+    font-size: 14px;
+}
+ul{
+    margin: 0;
+}
+/*トップセクション*/
+.top{
+    line-height: 1em;
+    text-align: right;
+}
+header{
+    background-color: #55ff45;
+    padding: 3px;
+}
+header form{
+    float: right;
+}
+hr{
+    height: 1px;
+    background-color: #333333;
+    width:calc(100% - 10px);
+}
+/*サイドメニュー*/
+.sidemenu{
+    width: 300px;
+    float: left;
+    border: 2px solid #333333;
+    background-color: #cccccc;
+    margin-right: 15px;
+    padding: 5px;
+}
+.sidemenu .comment{
+    font-size: small;
+    margin: 0;
+}
+
+/*記事部分*/
+.page{
+    float: left;
+    width:calc(100% - 350px);
+}
+.main h1{
+    font-size: 20px;
+    margin: 0 0 10px 0;
+    background-color: #555555;
+    color: #ffffff;
+    padding: 6px;
+}
+.main h2{
+    padding: 0 10px;
+    margin: 6px 0;
+    border: solid 1px #333333;
+}
+.main p{
+    margin: 0 5px;
+}
+.main img{
+    border: solid 1px #333333;
+}
+/*編集ページ*/
+.tag {
+    display: flex;
+}
+.inline{
+    display: inline;
+}
+.edit{
+    height: 70vh;
+    display: flex;
+}
+.html{
+    height: 95%;
+    width: 40%;
+}
+.html textarea{
+    display: inline-block;
+    height: 95%;
+    width: 95%;
+}
+.preview{
+    height: 95%;
+    width: 60%;
+}
+.preview .box{
+    display: inline-block;
+    height: 95%;
+    width: 95%;
+    border: 2px solid #333333;
+    overflow: scroll;
+}
