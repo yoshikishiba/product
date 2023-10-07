@@ -6,7 +6,7 @@ function pdo_init(){
         return $pdo;
     } catch (PDOException $e) {
         try {
-            $pdo = new PDO("mysql:dbname=atgp-shinsai_shiba-yoshiki;charset=utf8;host=mysql659.db.sakura.ne.jp", "atgp-shinsai", "8VBFMF0jJJmsQpipyQTUxo9WWJZFNd__");
+            $pdo = new PDO("");
             return $pdo;
         } catch (PDOException $e) {
             exit('DB-Connection-Error:'.$e->getMessage());
