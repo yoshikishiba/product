@@ -6,7 +6,7 @@ function pdo_init(){
         return $pdo;
     } catch (PDOException $e) {
         try {
-            $pdo = new PDO("");
+            $pdo = new PDO("","","");
             return $pdo;
         } catch (PDOException $e) {
             exit('DB-Connection-Error:'.$e->getMessage());

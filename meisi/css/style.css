@@ -1,0 +1,660 @@
+@charset "utf-8";
+/*------------------
+  　共通のスタイル
+ ------------------*/
+html {
+  /*
+  line-height: 5px;
+  box-sizing: border-box;
+  */
+}
+body {
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.1rem;
+  background-color: #fff;
+  color: #2e2e2e;
+}
+ul {
+  list-style: none;
+}
+a {
+  color: #2e2e2e;
+}
+/* レスポンシブ時改行 */
+.sp {
+  display: none;
+}
+
+/* 青枠*/
+.background {
+  max-width: 1500px;
+  min-width: 750px;
+  background-image: url("../img/background_darkblue.jpg");
+  background-position: top;
+  background-repeat: repeat;
+  background-size: cover;
+  padding: 35px!important;
+  box-sizing: border-box;
+}
+/* 白背景 */
+.content {
+  padding-top: 40px;
+  background-color: #fff;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+/* コンテンツ幅のためのBOX */
+.wrapper {
+  max-width: 1100px;
+  padding: 0 40px;
+  padding: 0 60px;
+  margin: 0 auto;
+}
+
+/* パンくずリスト */
+.topic-path {
+  display: flex;
+  font-size: 16px;
+  
+  margin-bottom: 30px;
+}
+.topic-path span {
+  margin: 0 15px;
+}
+
+/* ページ上部 */
+.upper { /* （TOPのみ） */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.upper-02 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+/* 登録情報・更新情報 */
+.flex {
+  width: 100%;
+  display: flex;
+  text-align: left;
+}
+.register,
+.update {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 16px;
+}
+.register dt,
+.register dd,
+.update dt,
+.update dd {
+  display: inline-block;
+  margin-bottom: 22px;
+}
+.register dt {
+  flex-basis: 18%;
+}
+.register dd {
+  flex-basis: 82%;
+}
+.update dt {
+  flex-basis: 28%;
+}
+.update dd {
+  flex-basis: 72%;
+}
+
+/* ライン */
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #d3d3d3;
+  margin: 10px 0 70px 0;
+}
+/* ライン（フォーム）*/
+.line__form {
+  max-width: 1050px;
+  height: 1px;
+  background-color: #d3d3d3;
+  margin: 50px 0;
+}
+/* ページ下部 */
+ .lower {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-bottom: 84px;
+   padding: 40px 0 84px 0;
+}
+
+/*------------------
+  　ボタン
+ ------------------*/
+/* 登録ボタン */
+.btn-new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 60px;
+  padding: 2px 0 2px 34px;
+  border-radius: 5px;
+  position: relative;
+  background-color: #52b888;
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1.2;
+  border: none;
+  text-decoration: none;
+}
+.btn-new::before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 50%;
+  left: 35px;
+  transform: translateY(-50%);
+  background-image: url("../img/icon-new.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.btn-new:hover {
+  text-decoration: underline;
+}
+
+/* 編集ボタン */
+.btn-edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 60px;
+  padding: 2px 0 2px 34px;
+  border-radius: 5px;
+  position: relative;
+  background-color: #4879b1;
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1.2;
+  border: none;
+  text-decoration: none;
+}
+.btn-edit::before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 50%;
+  left: 35px;
+  transform: translateY(-50%);
+  background-image: url("../img/icon-edit.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.btn-edit:hover {
+  text-decoration: underline;
+}
+
+/* 削除ボタン */
+.btn-delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 60px;
+  padding: 2px 0 2px 34px;
+  border-radius: 5px;
+  position: relative;
+  background-color: #d64654;
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1.2;
+  border: none;
+  text-decoration: none;
+}
+.btn-delete::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  left: 35px;
+  transform: translateY(-50%);
+  background-image: url("../img/icon-delete.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.btn-delete:hover {
+  text-decoration: underline;
+}
+
+/* 
+.title { 
+  text-align: center;
+  font-size: 1rem;
+} 
+
+ 取引先一覧
+.company__button {
+  display: block;
+  width: 400px;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid #333333;
+  margin: 10px auto;
+  text-align: center;
+  font-size: 1rem;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+.common__button {
+  display: block;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid #333333;
+  margin: 10px auto;
+  text-align: center;
+  font-size: 1rem;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+ 会社データ
+.detail {
+  display: block;
+  width: 500px;
+  margin: 0px auto;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #333333;
+  box-sizing: border-box;
+}
+.human__button {
+  display: block;
+  width: 200px;
+  height: 30px;
+  line-height: 30px;
+  margin: 0px auto;
+  text-align: center;
+  font-size: 1rem;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+*/
+
+/*------------------
+   TOPページ
+ ------------------*/
+/* 検索ボックス */
+.search-box {
+  width: 480px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  border: 2px solid #2e2e2e;
+  border-radius: 25px;
+  padding: 0 10px;
+  margin-right: 20px;
+}
+.search-box input {
+  width: 430px;
+  height: 45px;
+  padding: 5px 8px;
+  border: none;
+  box-sizing: border-box;
+  font-size: 18px;
+  outline: none;
+}
+.search-box input::placeholder{
+  color: #bdbdbd;
+}
+.search-box button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 45px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding-left: 8px 
+}
+.search-box button::before {
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/icon_search.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: '';
+}
+
+/* 会社リスト */
+.campany-list {
+  width: 100%;
+  margin-bottom: 75px;
+}
+.campany-list li {
+  padding: 20px 0;
+  border-bottom: solid 1px #afafb0;
+}
+.company__button {
+  font-size: 22px;
+  color: #2e2e2e;
+  line-height: 1.6;
+}
+
+/* ページネーション */
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 65px;
+}
+.pagination li {
+  margin-right: 10px;
+}
+.pagination li:last-of-type {
+  margin-right: 0px;
+}
+.pagination a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+}
+.pagination a:hover {
+  text-decoration: underline;
+}
+.pagination .active a,
+.pagination .disabled a {
+  color: lightgray;
+  pointer-events: none;
+  text-decoration: none;
+}
+.pagination .active a:hover {
+  text-decoration: none;
+}
+.pagination .disabled a:hover {
+  background-color: initial;
+  color: #ccc;
+}
+
+/*------------------
+   会社情報ページ
+ ------------------*/
+/* 会社情報 */
+.detail_com {
+  width: 100%;
+}
+.com-name {
+  width: 100%;
+  font-size: 30px;
+  margin-bottom: 62px;
+}
+.com-address {
+  width: 100%;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 80px;
+}
+.com-address p:nth-of-type(1) {
+  margin-bottom: 16px;
+}
+/* 社員リスト */
+.person-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+.person-list li {
+  width: 50%;
+}
+.person__button {
+  display: inline-block;
+  font-size: 22px;
+  margin-bottom: 36px;
+}
+
+/*------------------
+   社員情報ページ
+ ------------------*/
+.detail_per {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  margin-bottom: 80px;
+  padding-top: 75px;
+}
+.per-img {
+  width: 46%;
+}
+.per-img img {
+  width: 100%;
+}
+.per-text {
+  width: 50%;
+}
+.per-name {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.per-info {
+  width: 100%;
+}
+.per-info dt {
+  float: left;
+  margin-bottom: 20px;
+}
+.per-info dt::after {
+  content: ":";
+  margin: 0 10px;
+}
+.per-info dd {
+  margin-bottom: 20px;
+}
+
+/*------------------
+   フォーム
+ ------------------*/
+.form-title {
+  font-size: 26px;
+  text-align: center;
+  padding-top: 45px;
+}
+.form {
+  padding-bottom: 80px;
+}
+.form-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 35px;
+}
+.form-item__label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.form-item input {
+  max-width: 1050px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  outline: solid 1px #2e2e2e;
+}
+.form-item__input::placeholder{
+  color: #bdbdbd;
+  padding-left: 5px;
+}
+.form-item__input:focus {
+  background-color: #fff1f2;
+  outline: solid 2px #d64654;
+}
+/* 郵便番号検索ボタン */
+.input-zip__btn {
+  width: 90px;
+  height: 30px;
+  background-color: #2e2e2e;
+  color: #fff;
+  font-size: 15px;
+  margin-left: 12px;
+}
+.input-zip__btn:hover {
+  text-decoration: underline;
+}
+.input-zip__btn:focus {
+  background-color: #fff;
+  outline: solid 2px #2e2e2e;
+  color: #2e2e2e;
+}
+/* 任意ラベル、ファイル選択ボタン＆ファイル名 */
+.form-flex {
+  display: flex;
+  align-items: center;
+}
+.form-item__label_optional {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #afafb0;
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 16px;
+}
+
+/* 登録ボタン(フォーム) */
+.form-input__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 60px;
+  padding: 2px 0;
+  border-radius: 5px;
+  background-color: #52b888;
+  font-family: 'BIZ UDPGothic', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1.2;
+  border: none;
+  text-decoration: none;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.form-input__btn:hover {
+  text-decoration: underline;
+}
+
+ /* 「ファイルを選択」ボタン */
+.input-file__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 30px;
+  background-color: #2e2e2e;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+/* 元のinputを非表示に */
+#input-file[type="file"] {
+  display: none;
+}
+.input-file__name {
+  margin-left: 20px;
+}
+
+
+/*------------------
+   レスポンシブ
+ ------------------*/
+@media screen and (max-width: 1000px) {
+  .wrapper {
+    max-width: 850px;
+    padding: 0 65px;
+  }
+  .sp {
+    display: block;
+  }
+  .flex {
+    flex-direction: column;
+  }
+  .register,
+  .update {
+    width: 100%;
+  }
+  .register dt,
+  .register dd,
+  .update dt,
+  .update dd {
+    margin-bottom: 20px;
+  }
+  .register {
+    margin-bottom: 42px;
+  }
+  .register dt {
+    flex-basis: 14%;
+  }
+  .register dd {
+    flex-basis: 86%;
+  }
+  .update dt {
+    flex-basis: 20%;
+  }
+  .update dd {
+    flex-basis: 80%;
+  }
+  .person-list li {
+    width: 100%;
+  }
+  .btn-new,
+  .btn-edit,
+  .btn-delete {
+    width: 200px;
+  }
+  .detail_per {
+    flex-direction: column;
+  }
+  .per-img {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .per-text {
+    width: 100%;
+    
+  }
+
+}

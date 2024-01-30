@@ -1,0 +1,138 @@
+/*共通のスタイル*/
+html{
+    background-color: rgb(255, 245, 232);
+}
+body{
+	margin: 0px 10px;
+}
+h1{
+    margin: 10px 0px;
+}
+section{
+    display: flex;
+    flex-wrap: wrap;
+}
+section div{
+    padding: 5px 5px;
+    border-bottom: 1px solid #333333;
+    border-right: 1px solid #333333;
+    box-sizing:border-box;
+    display:flex; align-items:center;flex-wrap: wrap;
+    background-color: white;
+}
+select{
+    border: 2px solid rgb(155, 155, 255);
+}
+textarea{
+    font-size: 14px;
+    height: 100%;
+    width: 100%;
+    box-sizing:border-box;
+    border: 2px solid rgb(155, 155, 255);
+}
+.name{
+    width: 150px;
+}
+.name select{
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+}
+.time{
+    width: 150px;
+}
+.time p{
+    text-align: center;
+    width: 100%;
+}
+.time select{
+    width: 45px;
+    font-size: 14px;
+}
+.content p{
+    word-break: break-all;
+}
+.content input{
+    width: 100%;
+}
+.button{
+    width: 80px;
+}
+.button input{
+    height: 100%;
+    width: 70px;
+    font-size: 14px;
+}
+.display__section input{
+    background: rgb(255, 200, 200);
+}
+.input__section input{
+    background: rgb(200, 200, 255);
+}
+/*flexを折り返すために使用*/
+.spacer{
+    width: 100%;
+    border: 0px solid #333333 !important;
+    padding: 0 !important;
+}
+
+/*
+レスポンシブ対応のスタイル
+最大横幅900px(横幅が900pxより広くなっても画面表示はそれ以上横長になっていかない)
+600pxより大きい場合PCレイアウト
+320px～600pxでスマホレイアウト
+*/
+@media (min-width:900px){
+    .content{
+        width: 500px;
+    }
+}
+@media (min-width:600.1px) and (max-width:900px){
+    .content{
+        flex: 1;
+    }
+}
+@media (min-width:600px){
+    section div:nth-child(-n+4){
+        border-top: 1px solid #333333;
+    }
+    section div:nth-child(5n-4){
+        border-left: 1px solid #333333;
+    }
+}
+@media (max-width:600px){
+    h1{
+        text-align: center;
+    }
+    section{
+        justify-content:center;
+    }
+    form{
+        width: 100%;
+    }
+    .button input{
+        width: 100%;
+    }
+    .content{
+        width: 300px;
+    }
+    .button{
+        width: 300px;
+        margin-bottom: 5px;
+    }
+    section div:nth-child(5n-4){
+        border-top: 1px solid #333333;
+    }
+    section div:nth-child(5n-3){
+        border-top: 1px solid #333333;
+    }
+    section div:nth-child(5n-4){
+        border-left: 1px solid #333333;
+    }
+    section div:nth-child(5n-2){
+        border-left: 1px solid #333333;
+    }
+    section div:nth-child(5n-1){
+        border-left: 1px solid #333333;
+    }
+}
